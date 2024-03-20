@@ -206,7 +206,26 @@ void AlbumManager::showPicture()
 	// Bad practice!!!
 	// Can lead to privileges escalation
 	// You will replace it on WinApi Lab(bonus)
-	system(pic.getPath().c_str()); 
+	std::cout << "What program to open picture on?\n1. Paint\n2. IfranView\n";
+	char choice;
+	std::cin >> choice;
+	std::string msg;
+	switch (choice)
+	{
+	case '1':
+		msg = PAINT_PATH;
+		break;
+	case '2':
+		msg = IFRAN_PATH;
+		break;
+	default:
+		std::cout << "This is not a choice!\n";
+		system("pause");
+		return;
+	}
+	msg.append(" " + pic.getPath());
+	system(msg.c_str());
+	std::cout << msg << std::endl;
 }
 
 void AlbumManager::tagUserInPicture()

@@ -4,6 +4,8 @@
 #include "DatabaseAccess.h"
 #include "Album.h"
 
+#define PAINT_PATH "C:\\Windows\\System32\\mspaint.exe"
+#define IFRAN_PATH "\"C:\\Program Files\ (x86)\\IrfanView\\i_view32.exe\""
 
 class AlbumManager
 {
